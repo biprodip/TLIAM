@@ -3,22 +3,17 @@ import numpy as np
 from loader import *
 from utils import *
 import tensorflow as tf
-
-
-class EnvArgs:
-  def __init__(self):
-    self.MODEL_NAME = 'model_tliam_'            
-    self.FILE_NAME =  'mc_outcomes_tliam.pkl'   
-    self.BAYESIAN_FLAG = 1                     
-    self.BINS = 10                              
-    self.EPOCH_TS = 100
-    self.AVG_OPT = 'macro'
-    self.SAVE_RES = True
+import argparse
 
 
 if __name__ == "__main__":
-    args = EnvArgs()
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file_name', type=str, default='mc_outcomes_tliam.pkl')
+    parser.add_argument('--bayesian_flag', type=int, default=1)
+
+    args = parser.parse_args()
+    
     y_test_int, mean_test_mc_logits, mean_test_mc_probs, test_mc_probs, le_name_mapping = load_var(args)
 
     T = tf.Variable(initial_value=1.39, trainable=True, dtype=tf.float32)
