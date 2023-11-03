@@ -4,7 +4,7 @@ from sklearn.metrics import precision_score, accuracy_score, f1_score, recall_sc
 
 
 def get_performance(y_test_tmp, mean_test_mc_probs, le_name_mapping, args):
-    if args.BAYESIAN_FLAG == 1:
+    if args.bayesian_flag == 1:
         y_hat = mean_test_mc_probs.argmax(axis=1)   # total_test_sample
 
     e_acc = accuracy_score(y_test_tmp, y_hat)
@@ -36,7 +36,7 @@ def scale_logits(mean_mc_logits, T):
 
 
 def produce_cal_u1(args, mean_test_mc_probs, mean_mc_logits, y_test_tmp, T):
-    if args.BAYESIAN_FLAG == 1:
+    if args.bayesian_flag == 1:
         y_hat = mean_test_mc_probs.argmax(axis=1)   
 
     epsilon = 1e-10 

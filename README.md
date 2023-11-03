@@ -12,5 +12,5 @@ To produce results:
 2. Set the arguments in results.py
 3. Execute
    ```
-   $ python results.py 
+   $ python results.py --file_name 'mc_outcomes_tliam.pkl' --bayesian_flag 1 
    ```
