@@ -1,5 +1,5 @@
 # TLIAM
-This repository contains the some key results of our IoT attack detection model TLIAM.
+This repository contains some of the key results of our IoT attack detection model TLIAM.
 Updated complete code will be published once the paper is accepted.
 
 Dependencies:
