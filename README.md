@@ -8,9 +8,8 @@ Dependencies:
 3. scikit-learn
 
 To produce results:
-1. Put the files in the working directory
-2. Set the arguments in results.py
-3. Execute
+1. Put the files inside the working directory
+2. Execute
    ```
    $ python results.py --file_name 'mc_outcomes_tliam.pkl' --bayesian_flag 1 
    ```
